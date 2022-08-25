@@ -1,0 +1,101 @@
+-- --------------------------------------------------------
+-- Host:                         127.0.0.1
+-- Server version:               10.3.13-MariaDB - mariadb.org binary distribution
+-- Server OS:                    Win64
+-- HeidiSQL Version:             10.2.0.5599
+-- --------------------------------------------------------
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET NAMES utf8 */;
+/*!50503 SET NAMES utf8mb4 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+
+-- Dumping structure for table 22-wp.table_setting_wp
+CREATE TABLE IF NOT EXISTS `table_setting_wp` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `kepentingan` varchar(50) DEFAULT NULL,
+  `nilai_kepentingan` double DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+
+-- Dumping data for table 22-wp.table_setting_wp: ~4 rows (approximately)
+/*!40000 ALTER TABLE `table_setting_wp` DISABLE KEYS */;
+INSERT INTO `table_setting_wp` (`id`, `kepentingan`, `nilai_kepentingan`) VALUES
+	(1, 'Jenis Kulit', 0.2),
+	(2, 'Usia', 0.3),
+	(3, 'Kualitas', 0.2),
+	(4, 'Harga', 0.3);
+/*!40000 ALTER TABLE `table_setting_wp` ENABLE KEYS */;
+
+-- Dumping structure for table 22-wp.table_skincare
+CREATE TABLE IF NOT EXISTS `table_skincare` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `merek` varchar(50) NOT NULL,
+  `jenis_kulit` varchar(50) NOT NULL,
+  `usia` char(50) NOT NULL DEFAULT '0',
+  `kualitas` double NOT NULL DEFAULT 0,
+  `harga` double NOT NULL DEFAULT 0,
+  `gambar` text NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=37 DEFAULT CHARSET=latin1;
+
+-- Dumping data for table 22-wp.table_skincare: ~36 rows (approximately)
+/*!40000 ALTER TABLE `table_skincare` DISABLE KEYS */;
+INSERT INTO `table_skincare` (`id`, `merek`, `jenis_kulit`, `usia`, `kualitas`, `harga`, `gambar`) VALUES
+	(1, 'Sate Ayam', 'MAKANAN', '681', 100, 17500, 'menu 1.jpg'),
+	(2, 'Nasi Goreng Istimewa', 'MAKANAN', '343', 75, 20000, 'menu 2.jpg'),
+	(3, 'Nasi Goreng Ayam', 'MAKANAN', '527', 90, 25500, 'menu 3.jpg'),
+	(4, 'Nasi Goreng Spesial', 'MAKANAN', '290', 70, 30000, 'menu 4.jpg'),
+	(5, 'Ayam Mozarella', 'MAKANAN', '467', 85, 28000, 'menu 5.jpg'),
+	(6, 'Ayam Bakar', 'MAKANAN', '167', 60, 23000, 'menu 6.jpg'),
+	(7, 'Ayam Goreng', 'MAKANAN', '260', 65, 25000, 'menu 7.jpg'),
+	(8, 'Ayam Rica-rica', 'MAKANAN', '404', 80, 25000, 'menu 8.jpg'),
+	(9, 'Ayam Crispy', 'MAKANAN', '190', 60, 27000, 'menu 9.jpg'),
+	(10, 'Mie Goreng Seafood', 'MAKANAN', '370', 75, 23500, 'menu 10.jpg'),
+	(11, 'Mie Goreng Ayam', 'MAKANAN', '400', 80, 30000, 'menu 11.jpg'),
+	(12, 'Cumi Goreng', 'MAKANAN', '174', 60, 27000, 'menu 12.jpg'),
+	(13, 'Cumi Bakar', 'MAKANAN', '85', 50, 27000, 'menu 13.jpg'),
+	(14, 'Cumi Kentucky', 'MAKANAN', '106', 55, 30000, 'menu 14.jpg'),
+	(15, 'Udang Goreng', 'MAKANAN', '344', 75, 15000, 'menu 15.jpg'),
+	(16, 'Udang Bakar', 'MAKANAN', '287', 70, 15000, 'menu 16.jpg'),
+	(17, 'Udang Sambal Mentega', 'MAKANAN', '70', 50, 20000, 'menu 17.jpg'),
+	(18, 'Udang Saos Tiram', 'MAKANAN', '51', 50, 20500, 'menu 18.jpg'),
+	(19, 'Udang Asam Manis', 'MAKANAN', '106', 55, 23000, 'menu 19.jpg'),
+	(20, 'Sushi Ayam', 'MAKANAN', '200', 65, 22000, 'menu 20.jpg'),
+	(21, 'Sushi Daging', 'MAKANAN', '250', 65, 25000, 'menu 21.jpg'),
+	(22, 'Sushi Roll Crispy', 'MAKANAN', '520', 90, 25000, 'menu 22.jpg'),
+	(23, 'Takoyaki', 'MAKANAN', '364', 75, 20000, 'menu 23.jpg'),
+	(24, 'Shoyu Ramen', 'MAKANAN', '478', 85, 20000, 'menu 24.jpg'),
+	(25, 'Air Mineral', 'MINUMAN', '5', 5, 6000, 'air-mineral.png'),
+	(26, 'Es Teh', 'MINUMAN', '50', 30, 5000, 'es-teh.png'),
+	(27, 'Green Tea', 'MINUMAN', '50', 30, 12000, 'green-tea.png'),
+	(28, 'Ice Milo', 'MINUMAN', '60', 40, 15000, 'ice-milo.png'),
+	(29, 'Ice Oreo', 'MINUMAN', '60', 40, 15000, 'ice-oreo.png'),
+	(30, 'Ice Taro', 'MINUMAN', '60', 40, 15000, 'ice-taro.png'),
+	(31, 'Jus Alpukat', 'MINUMAN', '50', 20, 15000, 'jus-alpukat.png'),
+	(32, 'Jus Apel', 'MINUMAN', '50', 20, 15000, 'jus-apel.png'),
+	(33, 'Jus Jeruk', 'MINUMAN', '50', 20, 15000, 'jus-jeruk.png'),
+	(34, 'Mocca Chino', 'MINUMAN', '50', 40, 13000, 'mocca-chino.png'),
+	(35, 'Taro Cheese', 'MINUMAN', '60', 40, 15000, 'taro-cheese.png'),
+	(36, 'Thai Tea', 'MINUMAN', '40', 40, 12000, 'thai-tea.png');
+/*!40000 ALTER TABLE `table_skincare` ENABLE KEYS */;
+
+-- Dumping structure for table 22-wp.table_user
+CREATE TABLE IF NOT EXISTS `table_user` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nama_lengkap` varchar(250) NOT NULL,
+  `username` varchar(250) NOT NULL,
+  `password` varchar(250) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+-- Dumping data for table 22-wp.table_user: ~0 rows (approximately)
+/*!40000 ALTER TABLE `table_user` DISABLE KEYS */;
+INSERT INTO `table_user` (`id`, `nama_lengkap`, `username`, `password`) VALUES
+	(1, 'Admin', 'admin', '202cb962ac59075b964b07152d234b70');
+/*!40000 ALTER TABLE `table_user` ENABLE KEYS */;
+
+/*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
+/*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
