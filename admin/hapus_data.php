@@ -10,7 +10,7 @@
     $delete = mysqli_query($mysqli, "DELETE FROM table_skincare WHERE id = '$id' ");
 
 	if($delete){		 
-     echo '<script language="javascript"> alert("Berhasil Hapus Data!"); window.location.href = "'.$base_url_back.'/view_kelola_menu.php" </script>';
+     echo '<script language="javascript"> alert("Berhasil Hapus Data!"); window.location.href = "'.$base_url_back.'/view_kelola_data.php" </script>';
     }else{
     	echo mysqli_error($mysqli);
     }

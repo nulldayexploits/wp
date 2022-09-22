@@ -16,8 +16,8 @@
 
   # Nilai Kepentingan
   $i = 0;
-  $r = mysqli_query($mysqli, "SELECT * FROM table_setting_saw");
-  while($e = mysqli_fetch_array($r)) {
+  $r = mysqli_query($mysqli, "SELECT * FROM table_setting_wp");
+  while($e = mysqli_fetch_array($r)) {  
     
      $key_kepentingan[$i] = $e['kepentingan']; 
      $val_kepentingan[$i] = $e['nilai_kepentingan']; 

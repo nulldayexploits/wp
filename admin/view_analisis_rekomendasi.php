@@ -35,8 +35,8 @@
 
   # Nilai Kepentingan
   $i = 0;
-  $r = mysqli_query($mysqli, "SELECT * FROM table_setting_saw");
-  while($e = mysqli_fetch_array($r)) {
+  $r = mysqli_query($mysqli, "SELECT * FROM table_setting_wp");
+  while($e = mysqli_fetch_array($r)) {  
     
      $key_kepentingan[$i] = $e['kepentingan']; 
      $val_kepentingan[$i] = $e['nilai_kepentingan']; 
@@ -48,33 +48,27 @@
 
   # Prepare Data
   $j = 0;
-  $result = mysqli_query($mysqli, "SELECT * FROM table_menu");
+  $result = mysqli_query($mysqli, "SELECT * FROM table_skincare");
   while($d = mysqli_fetch_array($result)) {     
 
-    $r = mysqli_query($mysqli, "SELECT COUNT(*) tot FROM table_transaksi WHERE id_menu = $d[id]");
-    $rc = mysqli_fetch_array($r);
-    $s = mysqli_query($mysqli, "SELECT COUNT(*) tot FROM table_transaksi");
-    $rs = mysqli_fetch_array($s);
-
-    $trasaksi = number_format(($rc['tot']/$rs['tot'])*100,2);
-
     $data[$j] = array(
-                     $d['nama_menu'],
-               $d['harga'],
-               $d['type_makanan'],
-               $d['kalori'],
-               $trasaksi,
-               $d['gambar']
-              );
+                 $d['merek'],
+                 TransformJenisKulit($d['jenis_kulit']),
+                 $d['usia'],
+                 $d['kualitas'],
+                 $d['harga'],
+                 $d['gambar']
+                );
 
-    $kep1[$j]  = $d['harga'];  
-    $kep2[$j]  = $d['type_makanan'];  
-    $kep3[$j]  = $d['kalori'];  
-    $kep4[$j]  = $trasaksi;
+    $kep1[$j]  = TransformJenisKulit($d['jenis_kulit']);  
+    $kep2[$j]  = $d['usia'];  
+    $kep3[$j]  = $d['kualitas'];  
+    $kep4[$j]  = $d['harga'];
 
     $j++;  
   
   }
+
 
 
   # Mendapatkan Nilai Pembagi
@@ -82,7 +76,6 @@
   $kep2_pembagi = max($kep2);
   $kep3_pembagi = max($kep3);
   $kep4_pembagi = max($kep4);
-
   
 
 
@@ -119,10 +112,10 @@
                        $nn[3],
                        $nn[4],
                        $nn[5],
-                 ($nn[6]*$val_kepentingan[0])+
-                 ($nn[7]*$val_kepentingan[1])+
-                 ($nn[8]*$val_kepentingan[2])+
-                 ($nn[9]*$val_kepentingan[3])
+                 ($nn[1]*$val_kepentingan[0])+
+                 ($nn[2]*$val_kepentingan[1])+
+                 ($nn[3]*$val_kepentingan[2])+
+                 ($nn[4]*$val_kepentingan[3])
               ); 
 
     $x++;
@@ -134,9 +127,9 @@
 
 
   # Deklarasi Header Tabel
-  $Hdata        = array("Nama Menu","Harga","Type Makanan","Kalori","Total Transaksi","Gambar");
-  $Hnormalisasi = array("Nama Menu","Harga","Type Makanan","Kalori","Total Transaksi","Gambar","Normalisasi Harga","Normalisasi Type Makanan","Normalisasi Kalori", "Normalisasi Trasaksi");
-  $Hhasil       = array("Nama Menu","Harga","Type Makanan","Kalori","Total Transaksi","Gambar","Hasil Akhir");
+  $Hdata        = array("Merek","Jenis Kulit","Usia","Kualitas","Harga","Gambar");
+  $Hnormalisasi = array("Merek","Jenis Kulit","Usia","Kualitas","Harga","Gambar","Normalisasi Jenis Kulit","Normalisasi Usia","Normalisasi Kualitas", "Normalisasi Harga");
+  $Hhasil       = array("Merek","Jenis Kulit","Usia","Kualitas","Harga","Gambar","Hasil Akhir");
 
 
 
@@ -144,7 +137,7 @@
   {
   
   $tab  = "<h2>".$title."</h2>";
-  $tab .= "<table border=1 style='border-collapse:collapse;width:50%'><tr class='w3-red'>";
+  $tab .= "<table border=1 style='border-collapse:collapse;width:50%'><tr>";
   
   foreach ($var as $gg) {
      $tab .= "<td><center>".$gg."</td>";    
@@ -163,7 +156,7 @@
   $tab  = "<h2>".$title."</h2>";
   $tab .= "<table border=1 style='border-collapse:collapse;width:50%'>";
   
-  $tab .= "<tr class='w3-red'>";
+  $tab .= "<tr>";
   foreach ($header as $hh) {
     $tab .= "<th>$hh</th>";
   }
@@ -186,14 +179,55 @@
   displayData($key_kepentingan,'Key Kepentingan');
   displayData($val_kepentingan,'Nilai Kepentingan');
   displayDataMultidimentions($data,'Data',$Hdata);
-  displayData($kep1,'Data Kepentingan Berdasarkan Harga');
-  displayData($kep2,'Data Kepentingan Berdasarkan Type Makanan');
-  displayData($kep3,'Data Kepentingan Berdasarkan Kalori');
-  displayData($kep4,'Data Kepentingan Berdasarkan Sering Dipesan');
+  displayData($kep1,'Data Kepentingan Berdasarkan Jenis Kulit');
+  displayData($kep2,'Data Kepentingan Berdasarkan Usia');
+  displayData($kep3,'Data Kepentingan Berdasarkan Kualitas');
+  displayData($kep4,'Data Kepentingan Berdasarkan Harga');
   displayDataMultidimentions($normalisasi,'Data Hasil Normalisasi',$Hnormalisasi);
   displayDataMultidimentions($hasil,'Hasil Akhir',$Hhasil);
+  
 
+  
+  function TransformJenisKulit($d)
+  {
+     
+     if($d == "KERING"){
+       
+       $hasil = 90; 
 
+     }elseif($d == "BERMINYAK"){
+      
+       $hasil = 90;
+
+     }elseif($d == "SENSITIF"){
+      
+       $hasil = 90;
+
+     }elseif($d == "KERING,BERMINYAK"){
+      
+       $hasil = 88;
+
+     }elseif($d == "BERMINYAK,SENSITIF"){
+      
+       $hasil = 80;
+
+     }elseif($d == "KERING,SENSITIF"){
+      
+       $hasil = 85;
+
+     }elseif($d == "KERING,BERMINYAK,SENSITIF"){
+        
+        $hasil = 75;
+
+     }else{
+
+        $hasil = 50;
+ 
+     }
+
+    return $hasil;
+
+  }
 
  
 ?>
