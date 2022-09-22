@@ -289,8 +289,12 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="mbr-section-full col-md-12 col-lg-11">
-                        <h4 class="mbr-section-title display-2" id="judul" style="padding-top: 120px;">Menu Rekomendasi Untuk Anda</h4>
 
+                      <?php if(count($hasil) > 0){ ?>
+                        <h4 class="mbr-section-title display-3" id="judul" style="padding-top: 120px;">Hi <?php echo $_POST['nama'] ?> Ini Rekomendasi Untuk Kamu..</h4>
+                      <?php }else{ ?>
+                        <h5 class="mbr-section-title display-4" id="judul" style="padding-top: 120px;">Hi <?php echo $_POST['nama'] ?> Kami Tidak Punya Rekomendasi Yang Kamu Minta</h4>
+                      <?php } ?>
 <center>
 
 
@@ -304,7 +308,7 @@ foreach ($hasil as $df) {
   
 
     <div class="card">
-      <img src="admin/gambar/<?php echo $df[5]; ?>" class="card-img-top" alt="...">
+      <img src="admin/gambar/<?php echo $df[5]; ?>" width="100" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title"><b><?php echo $df[0]; ?></b></h5>
         
