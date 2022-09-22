@@ -84,7 +84,7 @@ if(isset($_POST['Update'])) {
     // Cek jika proses simpan ke database sukses atau tidak   
     if($update4){ 
          // Jika Sukses, redirect halaman menggunakan javascript
-      echo '<script language="javascript"> alert("Berhasil Setting Nilai Kepentingan SAW!"); window.location.href = "'.$base_url_back.'/view_setting_saw.php" </script>';
+      echo '<script language="javascript"> alert("Berhasil Setting Nilai Kepentingan WP!"); window.location.href = "'.$base_url_back.'/view_setting_wp.php" </script>';
     }else{
         // Jika Gagal, Lakukan :
         echo "Maaf, Terjadi kesalahan saat mencoba untuk menyimpan data ke database.";
