@@ -308,7 +308,7 @@ foreach ($hasil as $df) {
   
 
     <div class="card">
-      <img src="admin/gambar/<?php echo $df[5]; ?>" width="100" class="card-img-top" alt="...">
+      <img src="admin/gambar/<?php echo $df[5]; ?>" width="250" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title"><b><?php echo $df[0]; ?></b></h5>
         
