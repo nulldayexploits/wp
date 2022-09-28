@@ -314,7 +314,6 @@ foreach ($hasil as $df) {
         
             <p class="card-text">Kualitas: <?php echo number_format($df[3]); ?> %</p> 
             <p class="card-text">Rp. <?php echo number_format($df[4]); ?></p>
-            <p class="card-text">Cocok Untuk Usia <?php echo number_format($df[2]); ?></p>
       </div>
     </div>
 
