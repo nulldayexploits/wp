@@ -34,6 +34,7 @@
       <input type="hidden" name="jenis_kulit" value="<?php echo $data['jenis_kulit'] ?>">
       <input type="hidden" name="kualitas" value="<?php echo $data['kualitas'] ?>">
       <input type="hidden" name="harga" value="<?php echo $data['harga'] ?>">
+      <input type="hidden" name="gambar" value="<?php echo $data['gambar'] ?>">
 
       <button type="submit" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom" name="Submit">SIMPAN</button>
     </form>  
@@ -61,10 +62,11 @@ if(isset($_POST['Submit'])) {
   $usia        = $_POST['usia'];
   $kualitas    = $_POST['kualitas'];
   $harga       = $_POST['harga'];
+  $gambar      = $_POST['gambar'];
   
   // Memasukkan data kedatabase berdasarakan variabel tadi
-  $result = mysqli_query($mysqli, "INSERT INTO table_skincare (id, merek, jenis_kulit, usia, kualitas, harga) 
-                               VALUES(null, '$merek', '$jenis_kulit', '$usia', $kualitas, $harga)");
+  $result = mysqli_query($mysqli, "INSERT INTO table_skincare (id, merek, jenis_kulit, usia, kualitas, harga, gambar) 
+                               VALUES(null, '$merek', '$jenis_kulit', '$usia', $kualitas, $harga, '$gambar')");
   
   // Cek jika proses simpan ke database sukses atau tidak   
   if($result){ 
