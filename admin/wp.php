@@ -34,14 +34,14 @@
 
     $data[$j] = array(
       	         $d['merek'],
-      				   TransformJenisKulit($d['jenis_kulit']),
+      				   $d['jenis_kulit'],
       				   $d['usia'],
                  $d['kualitas'],
       				   $d['harga'],
       				   $d['gambar']
       				  );
 
-    $kep1[$j]  = TransformJenisKulit($d['jenis_kulit']);  
+    $kep1[$j]  = $d['jenis_kulit'];  
     $kep2[$j]  = $d['usia'];  
     $kep3[$j]  = $d['kualitas'];  
     $kep4[$j]  = $d['harga'];

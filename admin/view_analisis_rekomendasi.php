@@ -53,14 +53,14 @@
 
     $data[$j] = array(
                  $d['merek'],
-                 TransformJenisKulit($d['jenis_kulit']),
+                 $d['jenis_kulit'],
                  $d['usia'],
                  $d['kualitas'],
                  $d['harga'],
                  $d['gambar']
                 );
 
-    $kep1[$j]  = TransformJenisKulit($d['jenis_kulit']);  
+    $kep1[$j]  = $d['jenis_kulit'];  
     $kep2[$j]  = $d['usia'];  
     $kep3[$j]  = $d['kualitas'];  
     $kep4[$j]  = $d['harga'];
@@ -140,7 +140,7 @@
   $tab .= "<table border=1 style='border-collapse:collapse;width:50%'><tr>";
   
   foreach ($var as $gg) {
-     $tab .= "<td><center>".$gg."</td>";    
+     $tab .= "<td><center><b>".$gg."</td>";    
   }   
   
   $tab .= "</tr></table><br><br>";

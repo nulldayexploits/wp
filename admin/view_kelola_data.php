@@ -36,7 +36,7 @@
         ?>
         <tr>
           <td><center><?php echo $no; ?></td>
-          <td><?php echo $data['merek']; ?></td>
+          <td><b><?php echo $data['merek']; ?></b></td>
           <td><center><?php echo $data['jenis_kulit']; ?></td>
           <td><center><?php echo $data['kualitas']; ?></td>
           <td><center><a href="tambah-usia.php?id=<?php echo $data['id']; ?>" class="wplus">[+] Tambah Usia</a> <?php echo $data['usia']; ?></td>
