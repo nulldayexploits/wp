@@ -33,19 +33,26 @@
     
     <div role="log" ariax-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"><div>Butuh bantuan kami?</div></div>
     <link rel="stylesheet" type="text/css" href="assets/css/gigo-responsive.css">
-
-    <style type="text/css">
-        :root { 
+<!-- :root { 
           --body-bg-color: #FFC0CB;
           --nmain-color: #fff;
           --nmain-bg-color: #FF69B4;
           --nmain-bg-color-hover: #3e2723;
           --ncont-bg-color: #d7ccc8;
           --nhover-nav-color: #dce1ed;
+        } -->
+    <style type="text/css">
+        :root { 
+          --body-bg-color: linear-gradient(90deg, rgba(255,0,176,1) 0%, rgba(255,0,194,1) 35%, rgba(255,0,224,1) 65%, rgba(226,0,255,1) 100%);
+          --nmain-color: #fff;
+          --nmain-bg-color: linear-gradient(90deg, rgba(255,0,176,1) 0%, rgba(255,0,194,1) 35%, rgba(255,0,224,1) 65%, rgba(226,0,255,1) 100%);
+          --nmain-bg-color-hover: #3e2723;
+          --ncont-bg-color: #d7ccc8;
+          --nhover-nav-color: #dce1ed;
         }
 
         body{
-          background-color: var(--body-bg-color);
+          background: var(--body-bg-color);
         }
 
         #menu-2 .link{ font-size: 14px; }
