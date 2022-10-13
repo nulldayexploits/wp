@@ -43,9 +43,9 @@
         } -->
     <style type="text/css">
         :root { 
-          --body-bg-color: linear-gradient(90deg, rgba(255,0,176,1) 0%, rgba(255,0,194,1) 35%, rgba(255,0,224,1) 65%, rgba(226,0,255,1) 100%);
+          --body-bg-color: linear-gradient(90deg, rgba(255,195,243,1) 0%, rgba(255,184,241,1) 35%, rgba(255,173,239,1) 65%, rgba(255,161,237,1) 100%);
           --nmain-color: #fff;
-          --nmain-bg-color: linear-gradient(90deg, rgba(255,0,176,1) 0%, rgba(255,0,194,1) 35%, rgba(255,0,224,1) 65%, rgba(226,0,255,1) 100%);
+          --nmain-bg-color: linear-gradient(90deg, rgba(255,195,243,1) 0%, rgba(255,184,241,1) 35%, rgba(255,173,239,1) 65%, rgba(255,161,237,1) 100%);
           --nmain-bg-color-hover: #3e2723;
           --ncont-bg-color: #d7ccc8;
           --nhover-nav-color: #dce1ed;
