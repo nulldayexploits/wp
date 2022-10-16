@@ -53,13 +53,9 @@
     $kond_kual = 'NULL';
     $kual_1    = 0;
     $kual_2    = 0;
-  }elseif($_POST['kualitas'] == "10-49"){
+  }elseif($_POST['kualitas'] == "60-70"){
     $kond_kual = 'no';
-    $kual_1    = 10;
-    $kual_2    = 49;
-  }elseif($_POST['kualitas'] == "50-70"){
-    $kond_kual = 'no';
-    $kual_1    = 50;
+    $kual_1    = 60;
     $kual_2    = 70;
   }elseif($_POST['kualitas'] == "71-80"){
     $kond_kual = 'no';
