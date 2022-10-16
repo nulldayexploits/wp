@@ -34,7 +34,7 @@
                         <br>
 
                         <select name="kualitas" class="form-control">
-                            <option>Dari 10 - 100 kamu pilih kualitas skincare yang berapa persen sih?</option>
+                            <option>Dari 60 - 100 kamu pilih kualitas skincare yang berapa persen sih?</option>
                             <option value="NULL">Kualitas apa ajah...</option>
                             <option value="60-70">60-70</option>
                             <option value="71-80">71-80</option>
