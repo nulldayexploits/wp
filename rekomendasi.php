@@ -19,9 +19,9 @@
     $kond_usia = 'NULL';
     $usia_1    = 0;
     $usia_2    = 0;
-  }elseif($_POST['usia'] == "16-20"){
+  }elseif($_POST['usia'] == "17-20"){
     $kond_usia = 'no';
-    $usia_1    = 16;
+    $usia_1    = 17;
     $usia_2    = 20;
   }elseif($_POST['usia'] == "21-24"){
     $kond_usia = 'no';

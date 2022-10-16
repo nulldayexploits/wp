@@ -25,7 +25,7 @@
                         <select name="usia" class="form-control">
                             <option value="">Usia Kamu Berapa?</option>
                             <option value="NULL">Terserah..</option>
-                            <option value="16-20">16-20</option>
+                            <option value="17-20">17-20</option>
                             <option value="21-24">21-24</option>
                             <option value="25-28">25-28</option>
                             <option value="29-32">29-32</option>

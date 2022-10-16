@@ -26,7 +26,7 @@
   <!-- Services -->
   <div class="w3-container" id="tentang" style="margin-top:45px;font-weight: bold;font-size: 20px;">
     <center><BR><br><br>
-    	<h1>SELAMAT DATANG</h1> 
+    	<h1>SELAMAT DATANG ADMIN</h1> 
       </center>
   </div>
   
