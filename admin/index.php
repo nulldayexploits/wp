@@ -24,9 +24,9 @@
    
 
   <!-- Services -->
-  <div class="w3-container" id="tentang" style="margin-top:45px;font-weight: bold;font-size: 20px;">
-    <center><BR><br><br>
-    	<h1>SELAMAT DATANG ADMIN</h1> 
+  <div class="w3-container" id="tentang" style="margin-top:0px;font-weight: bold;font-size: 20px;margin-left: -70px;">
+    <center>
+    	<img src="pic/dashboard.png" width="1100">
       </center>
   </div>
   
