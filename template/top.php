@@ -127,7 +127,7 @@
                         <div class="navbar-brand">
                             <a href="#" class="navbar-logo">
                                 <img src="../img/logo2.png" alt="" title=""></a>
-                            <a class="navbar-caption" href="#" style="font-size: 25px;font-weight: bold;"><b style="color:#fff;">Rekomendasi Skincare</b></a>
+                            <a class="navbar-caption" href="#" style="font-size: 25px;font-weight: bold;"><b style="color:#fff;">Rekomendasi Skincare "Facial Wash"</b></a>
                         </div>
                     </div>
                     <div class="mbr-table-cell">
