@@ -52,7 +52,9 @@
         }
 
         body{
-          background: var(--body-bg-color);
+          /*background: var(--body-bg-color);*/
+          background-image: url("assets/gambar/bg.jpeg");
+          font-family: Helvetica;
         }
 
         #menu-2 .link{ font-size: 14px; }
@@ -117,14 +119,13 @@
           display: inline-block;
           font-size: 12px;
         }
-
     </style>
     <section id="menu-2">
         <nav class="navbar navbar-dropdown bg-color navbar-fixed-top navbar-short">
             <div class="container">
                 <div class="mbr-table">
                     <div class="mbr-table-cell">
-                        <div class="navbar-brand">
+                        <div class="navbar-brand" style="font-family: calibri;">
                             <a href="#" class="navbar-logo">
                                 <img src="../img/logo2.png" alt="" title=""></a>
                             <a class="navbar-caption" href="#" style="font-size: 25px;font-weight: bold;"><b style="color:#fff;">Rekomendasi Skincare "Facial Wash"</b></a>

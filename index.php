@@ -4,7 +4,7 @@
         <div class="mbr-table-cell">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-md-6 col-lg-6"><!-- 
+                    <div class="col-md-6 col-lg-6" style="font-family: calibri;"><!-- 
                         <h5 class="mbr-section-title display-2" id="judul" style="padding-top: 120px;color:white;">Menu Rekomendasi Skincare Buat Kamu</h5> -->
 
                         <form action="rekomendasi.php" method="POST">
@@ -81,7 +81,7 @@
                                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                                     <h2 class="entry-title" style="font-style: calibri; font-weight: bold;"><center>Selamat Datang!</center></h2>
                                 </div>
-                                <div class="modal-body">
+                                <div class="modal-body" style="font-family: calibri;">
 
                   <p>
                     Skincare adalah rangkaian dari berbagai penerapan yang mendukung keadaan integritas kulit, untuk meningkatkan sebuah penampilan dan mengubah kondisi kulit. Mereka dapat mengandung nutrisi, menghindari dari paparan sinar matahari yang berlebihan dan penggunaan produk kulit emolien yang tepat.
